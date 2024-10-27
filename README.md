@@ -1,6 +1,6 @@
 Penjelasan Program Robot Pertarungan
 
-Saya membuat projek pertarungan robot, yaitu bentu variasi pemrograman pertarungan robot yang lebih baik daripada pertarungan robot pada tugas awal.
+Saya membuat projek pertarungan robot, yaitu bentuk variasi pemrograman pertarungan robot yang lebih baik daripada pertarungan robot pada tugas awal.
 Terdapat beberapa perubahan, seperti penambahan kemampuan khusus, interaksi pemain yang lebih dinamis, otomatisasi untuk robot lawan, pengaturan pertarungan yang lebih baik, desain nama robot dan atribut khusus.
 
 Aturan Permainan
