@@ -37,13 +37,13 @@ Berikut adalah perbedaan utama antara program robot pertarungan yang baru dengan
       Kemampuan Bertahan: Meningkatkan kekuatan pertahanan robot.
       Bonus Kesehatan: Menambah kesehatan robot.
       Serangan Kritis: Menggandakan atau melipatgandakan kekuatan yang diberikan saat menyerang.
-2. Interaksi Pemain yang Lebih Dinamis
+2. Interaksi Dinamis
    a. Program Awal: Pemain hanya mengatur serangan dalam giliran tanpa opsi untuk memilih kemampuan tambahan.
    b. Program Baru: Pemain diberikan kesempatan untuk memilih apakah ingin menggunakan kemampuan bertahan, bonus kesehatan, dan serangan kritis pada setiap serangan.
 4. Otomatisasi untuk Robot Lawan
    a. Program Awal: Tidak ada kemampuan otomatis untuk robot lawan.
    b. Program Baru: Robot lawan secara otomatis menggunakan kemampuan kesehatan dan serangan kritis jika belum digunakan.
-5. Pengaturan Pertarungan yang Lebih Baik
+5. Pengaturan Pertarungan
    a. Program Awal: Proses pertarungan cenderung lebih linear tanpa ada pilihan untuk berinteraksi lebih strategis.
    b. Program Baru: Sistem giliran yang lebih kompleks, di mana keputusan pemain mempengaruhi hasil pertarungan.
 6. Desain Nama Robot dan Atribut Khusus
