@@ -32,20 +32,20 @@ Arti Nama Masing-Masing Robot
 Setiap robot dalam permainan ini memiliki karakteristik unik sehingga pemain harus berpikir dengan cermat untuk menggunakan kemampuan khusus yang dimiliki oleh robot.
 Berikut adalah perbedaan utama antara program robot pertarungan yang baru dengan program awal yang saya buat untuk tugas awal:
 1. Penambahan Kemampuan Khusus
-   Program Awal: Setiap robot hanya memiliki kesehatan dan kekuatan serangan.
-   Program Baru: Setiap robot memiliki tiga kemampuan khusus yang dapat digunakan sekali selama pertarungan:
-   Kemampuan Bertahan: Meningkatkan kekuatan pertahanan robot.
-   Bonus Kesehatan: Menambah kesehatan robot.
-   Serangan Kritis: Menggandakan (atau melipatgandakan) kerusakan yang diberikan saat menyerang.
+   a. Program Awal: Setiap robot hanya memiliki kesehatan dan kekuatan serangan.
+   b. Program Baru: Setiap robot memiliki tiga kemampuan khusus yang dapat digunakan sekali selama pertarungan:
+      Kemampuan Bertahan: Meningkatkan kekuatan pertahanan robot.
+      Bonus Kesehatan: Menambah kesehatan robot.
+      Serangan Kritis: Menggandakan (atau melipatgandakan) kerusakan yang diberikan saat menyerang.
 2. Interaksi Pemain yang Lebih Dinamis
-   Program Awal: Pemain hanya mengatur serangan dalam giliran tanpa opsi untuk memilih kemampuan tambahan.
-   Program Baru: Pemain diberikan kesempatan untuk memilih apakah ingin menggunakan kemampuan bertahan, bonus kesehatan, dan serangan kritis pada setiap serangan, menciptakan elemen strategi yang lebih mendalam.
-3. Otomatisasi untuk Robot Lawan
-   Program Awal: Tidak ada kemampuan otomatis untuk robot lawan.
-   Program Baru: Robot lawan secara otomatis menggunakan kemampuan kesehatan dan serangan kritis jika belum digunakan, menambah elemen kejutan dan tantangan dalam pertarungan.
-4. Pengaturan Pertarungan yang Lebih Baik
-   Program Awal: Proses pertarungan cenderung lebih linear tanpa pilihan untuk interaksi yang lebih strategis.
-   Program Baru: Memperkenalkan sistem giliran yang lebih kompleks, di mana keputusan pemain mempengaruhi hasil pertarungan dengan cara yang lebih signifikan.
-5. Desain Nama Robot dan Atribut Khusus
-   Program Awal: Robot hanya memiliki nama generik seperti RoboOne, RoboTwo, dan RoboThree.
-   Program Baru: Nama robot diubah menjadi lebih kreatif dan bermakna, seperti AegisX, Vitalis, dan CritStorm, dengan kemampuan yang disesuaikan dengan nama-nama tersebut.
+   a. Program Awal: Pemain hanya mengatur serangan dalam giliran tanpa opsi untuk memilih kemampuan tambahan.
+   b. Program Baru: Pemain diberikan kesempatan untuk memilih apakah ingin menggunakan kemampuan bertahan, bonus kesehatan, dan serangan kritis pada setiap serangan, menciptakan elemen strategi yang lebih mendalam.
+4. Otomatisasi untuk Robot Lawan
+   a. Program Awal: Tidak ada kemampuan otomatis untuk robot lawan.
+   b. Program Baru: Robot lawan secara otomatis menggunakan kemampuan kesehatan dan serangan kritis jika belum digunakan, menambah elemen kejutan dan tantangan dalam pertarungan.
+5. Pengaturan Pertarungan yang Lebih Baik
+   a. Program Awal: Proses pertarungan cenderung lebih linear tanpa pilihan untuk interaksi yang lebih strategis.
+   b. Program Baru: Memperkenalkan sistem giliran yang lebih kompleks, di mana keputusan pemain mempengaruhi hasil pertarungan dengan cara yang lebih signifikan.
+6. Desain Nama Robot dan Atribut Khusus
+   a. Program Awal: Robot hanya memiliki nama generik seperti RoboOne, RoboTwo, dan RoboThree.
+   b. Program Baru: Nama robot diubah menjadi lebih kreatif dan bermakna, seperti AegisX, Vitalis, dan CritStorm, dengan kemampuan yang disesuaikan dengan nama-nama tersebut.
