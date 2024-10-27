@@ -13,11 +13,10 @@ Aturan Permainan
 4. Serangan Otomatis: Robot lawan secara otomatis menggunakan kemampuan kesehatan dan serangan kritis jika belum digunakan.
 5. Kemenangan: Pertarungan berlanjut sampai salah satu robot kalah (kesehatannya mencapai 0).
 
-Penjelasan Program
 Program ini menggunakan OOP (Object-Oriented Programming) dalam bahasa pemrograman C++. Terdapat tiga kelas utama:
-a. Robot: Merepresentasikan robot dengan atribut seperti nama, kesehatan, kekuatan serangan, kekuatan pertahanan, dan kemampuan khusus. Kelas ini juga memiliki metode untuk menyerang lawan dan menggunakan kemampuan khusus.
-b. Battle: Mengelola pertarungan antara dua robot. Kelas ini mengatur giliran, mengizinkan pemain untuk menggunakan kemampuan dan melakukan serangan, serta menentukan pemenang.
-c. Game: Mengelola koleksi robot, memungkinkan pemain untuk memilih robot dan lawan, serta memulai permainan.
+1. Robot: Merepresentasikan robot dengan atribut seperti nama, kesehatan, kekuatan serangan, kekuatan pertahanan, dan kemampuan khusus. Kelas ini juga memiliki metode untuk menyerang lawan dan menggunakan kemampuan khusus.
+2. Battle: Mengelola pertarungan antara dua robot. Kelas ini mengatur giliran, mengizinkan pemain untuk menggunakan kemampuan dan melakukan serangan, serta menentukan pemenang.
+3. Game: Mengelola koleksi robot, memungkinkan pemain untuk memilih robot dan lawan, serta memulai permainan.
 
 Arti Nama Masing-Masing Robot
 1. AegisX
