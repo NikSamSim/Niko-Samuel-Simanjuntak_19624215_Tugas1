@@ -31,7 +31,7 @@ Arti Nama Masing-Masing Robot
    Kemampuan Khusus: Memiliki kemampuan serangan kritis yang paling kuat di antara robot lainnya.
 
 Setiap robot dalam permainan ini memiliki karakteristik unik sehingga pemain harus berpikir dengan cermat untuk menggunakan kemampuan khusus yang dimiliki oleh robot.
-Berikut adalah perbedaan utama antara program robot pertarungan yang baru dengan program awal yang Anda buat:
+Berikut adalah perbedaan utama antara program robot pertarungan yang baru dengan program awal yang saya buat untuk tugas awal:
 1. Penambahan Kemampuan Khusus
    Program Awal: Setiap robot hanya memiliki kesehatan dan kekuatan serangan.
    Program Baru: Setiap robot memiliki tiga kemampuan khusus yang dapat digunakan sekali selama pertarungan:
