@@ -1,0 +1,161 @@
+CLASS Robot:
+    FUNCTION Constructor(name, health, attack_power, defense_power, specialty):
+        SET this.name = name
+        SET this.health = health
+        SET this.attack_power = attack_power
+        SET this.defense_power = defense_power
+        SET this.specialty = specialty
+        SET this.usedDefense = false
+        SET this.usedHealthBonus = false
+        SET this.usedCriticalHit = false
+
+    FUNCTION attack(opponent, useCritical):
+        SET damage = RANDOM(1, this.attack_power)
+        
+        IF useCritical AND NOT this.usedCriticalHit THEN:
+            IF this.specialty == "crit" THEN:
+                damage *= 3
+            ELSE:
+                damage *= 2
+            ENDIF
+            PRINT "*** Critical Hit! ***"
+            SET this.usedCriticalHit = true
+
+        damage -= RANDOM(0, opponent.defense_power)
+        IF damage < 0 THEN:
+            SET damage = 0
+        ENDIF
+
+        opponent.health -= damage
+        PRINT this.name + " attacks " + opponent.name + " for " + damage + " damage!"
+        PRINT opponent.name + "'s Health: " + opponent.health
+
+    FUNCTION isDefeated():
+        RETURN this.health <= 0
+
+    FUNCTION useHealthBonus():
+        IF NOT this.usedHealthBonus THEN:
+            SET bonus_health = 20
+            IF this.specialty == "health" THEN:
+                bonus_health = 40
+            ENDIF
+            this.health += bonus_health
+            PRINT this.name + " used Health Bonus and gained " + bonus_health + " health!"
+            PRINT this.name + "'s Health: " + this.health
+            SET this.usedHealthBonus = true
+        ENDIF
+    ENDCLASS
+
+CLASS Battle:
+    FUNCTION Constructor(player, enemy):
+        SET this.player = player
+        SET this.enemy = enemy
+
+    FUNCTION start_fight():
+        PRINT "Battle Start!"
+        WHILE this.player.health > 0 AND this.enemy.health > 0 DO:
+            SET useDefense = false
+            SET useHealthBonus = false
+            SET useCritical = false
+            
+            PRINT "\nYour turn! Choose an action for " + this.player.name + ":"
+            
+            IF NOT this.player.usedDefense THEN:
+                PRINT "Do you want to use defense ability? (y/n):"
+                INPUT choice
+                IF choice == 'y' OR choice == 'Y' THEN:
+                    SET useDefense = true
+                    SET this.player.usedDefense = true
+                ENDIF
+            ENDIF
+
+            IF NOT this.player.usedHealthBonus THEN:
+                PRINT "Do you want to use health bonus? (y/n):"
+                INPUT choice
+                IF choice == 'y' OR choice == 'Y' THEN:
+                    SET useHealthBonus = true
+                ENDIF
+            ENDIF
+
+            IF NOT this.player.usedCriticalHit THEN:
+                PRINT "Do you want to use critical hit? (y/n):"
+                INPUT choice
+                IF choice == 'y' OR choice == 'Y' THEN:
+                    SET useCritical = true
+                ENDIF
+            ENDIF
+
+            IF useHealthBonus THEN:
+                CALL this.player.useHealthBonus()
+
+            IF useDefense THEN:
+                this.player.defense_power *= 2
+                PRINT this.player.name + " used Defense Ability!"
+            ENDIF
+
+            CALL this.player.attack(this.enemy, useCritical)
+            IF this.enemy.isDefeated() THEN:
+                PRINT this.enemy.name + " is defeated!"
+                PRINT this.player.name + " wins!"
+                BREAK
+            ENDIF
+
+            IF NOT this.enemy.usedHealthBonus THEN:
+                CALL this.enemy.useHealthBonus()
+            ENDIF
+
+            CALL this.enemy.attack(this.player, NOT this.enemy.usedCriticalHit)
+            IF NOT this.enemy.usedDefense THEN:
+                this.enemy.defense_power *= 2
+                PRINT this.enemy.name + " used Defense Ability!"
+            ENDIF
+
+            IF this.player.isDefeated() THEN:
+                PRINT this.player.name + " is defeated!"
+                PRINT this.enemy.name + " wins!"
+                BREAK
+            ENDIF
+        ENDWHILE
+    ENDCLASS
+
+CLASS Game:
+    FUNCTION Constructor():
+        SET this.robots = EMPTY LIST
+
+    FUNCTION add_robot(robot):
+        APPEND robot TO this.robots
+
+    FUNCTION start_game():
+        PRINT "Choose your robot:"
+        FOR each robot IN this.robots DO:
+            PRINT robot.name + " (Health: " + robot.health + ") (Attack Power: " + robot.attack_power + ") (Defense Power: " + robot.defense_power + ")"
+        ENDFOR
+
+        PRINT "Select your robot: "
+        INPUT playerIndex
+        PRINT "Choose your enemy:"
+        FOR each robot IN this.robots DO:
+            IF robot != this.robots[playerIndex - 1] THEN:
+                PRINT robot.name + " (Health: " + robot.health + ") (Attack Power: " + robot.attack_power + ") (Defense Power: " + robot.defense_power + ")"
+            ENDIF
+        ENDFOR
+        PRINT "Select your enemy: "
+        INPUT enemyIndex
+
+        SET playerRobot = this.robots[playerIndex - 1]
+        SET enemyRobot = this.robots[enemyIndex - 1]
+
+        SET battle = NEW Battle(playerRobot, enemyRobot)
+        CALL battle.start_fight()
+    ENDCLASS
+
+FUNCTION main():
+    SET random_seed = TIME(0)
+    SET game = NEW Game()
+
+    CALL game.add_robot(NEW Robot("AegisX", 100, 90, 20, "defense"))
+    CALL game.add_robot(NEW Robot("Vitalis", 200, 45, 30, "health"))
+    CALL game.add_robot(NEW Robot("CritStorm", 300, 30, 40, "crit"))
+
+    CALL game.start_game()
+END FUNCTION
