@@ -9,7 +9,7 @@ Aturan Permainan
 3. Giliran Bertarung: Pertarungan berlangsung dalam giliran. Pada setiap giliran, pemain dapat memilih untuk menggunakan kemampuan khusus robotnya:
    a. Kemampuan Bertahan: Meningkatkan kekuatan pertahanan robot, tetapi hanya dapat digunakan sekali.
    b. Bonus Kesehatan: Menambah jumlah kesehatan robot, hanya dapat digunakan sekali.
-   c. Serangan Kritis: Menggandakan (atau melipatgandakan) kerusakan serangan, hanya dapat digunakan sekali.
+   c. Serangan Kritis: Menggandakan atau melipatgandakan kekuatan serangan, hanya dapat digunakan sekali.
 4. Serangan Otomatis: Robot lawan secara otomatis menggunakan kemampuan kesehatan dan serangan kritis jika belum digunakan.
 5. Kemenangan: Pertarungan berlanjut sampai salah satu robot kalah (kesehatannya mencapai 0).
 
@@ -26,7 +26,7 @@ Arti Nama Masing-Masing Robot
    Berasal dari kata Latin "vitalis" yang berarti "hidup" atau "penting". Nama ini mencerminkan kekuatan robot dalam memulihkan kesehatan, membuatnya tangguh dalam hal stamina.
    Kemampuan Khusus: Memiliki kemampuan bonus kesehatan yang terbaik di antara robot lainnya.
 3. CritStorm
-   Kombinasi dari "Critical" (serangan kritis) dan "Storm" (badai). Nama ini menunjukkan kekuatan serangan kritisnya yang sangat kuat, seperti badai yang menghancurkan.
+   Kombinasi dari "Critical" (serangan kritis) dan "Storm" (badai). Nama ini menunjukkan kekuatan serangan kritisnya sangat kuat, seperti badai yang menghancurkan.
    Kemampuan Khusus: Memiliki kemampuan serangan kritis yang paling kuat di antara robot lainnya.
 
 Setiap robot dalam permainan ini memiliki karakteristik unik sehingga pemain harus berpikir dengan cermat untuk menggunakan kemampuan khusus yang dimiliki oleh robot.
@@ -36,16 +36,16 @@ Berikut adalah perbedaan utama antara program robot pertarungan yang baru dengan
    b. Program Baru: Setiap robot memiliki tiga kemampuan khusus yang dapat digunakan sekali selama pertarungan:
       Kemampuan Bertahan: Meningkatkan kekuatan pertahanan robot.
       Bonus Kesehatan: Menambah kesehatan robot.
-      Serangan Kritis: Menggandakan (atau melipatgandakan) kerusakan yang diberikan saat menyerang.
+      Serangan Kritis: Menggandakan atau melipatgandakan kekuatan yang diberikan saat menyerang.
 2. Interaksi Pemain yang Lebih Dinamis
    a. Program Awal: Pemain hanya mengatur serangan dalam giliran tanpa opsi untuk memilih kemampuan tambahan.
-   b. Program Baru: Pemain diberikan kesempatan untuk memilih apakah ingin menggunakan kemampuan bertahan, bonus kesehatan, dan serangan kritis pada setiap serangan, menciptakan elemen strategi yang lebih mendalam.
+   b. Program Baru: Pemain diberikan kesempatan untuk memilih apakah ingin menggunakan kemampuan bertahan, bonus kesehatan, dan serangan kritis pada setiap serangan.
 4. Otomatisasi untuk Robot Lawan
    a. Program Awal: Tidak ada kemampuan otomatis untuk robot lawan.
-   b. Program Baru: Robot lawan secara otomatis menggunakan kemampuan kesehatan dan serangan kritis jika belum digunakan, menambah elemen kejutan dan tantangan dalam pertarungan.
+   b. Program Baru: Robot lawan secara otomatis menggunakan kemampuan kesehatan dan serangan kritis jika belum digunakan.
 5. Pengaturan Pertarungan yang Lebih Baik
-   a. Program Awal: Proses pertarungan cenderung lebih linear tanpa pilihan untuk interaksi yang lebih strategis.
-   b. Program Baru: Memperkenalkan sistem giliran yang lebih kompleks, di mana keputusan pemain mempengaruhi hasil pertarungan dengan cara yang lebih signifikan.
+   a. Program Awal: Proses pertarungan cenderung lebih linear tanpa ada pilihan untuk berinteraksi lebih strategis.
+   b. Program Baru: Sistem giliran yang lebih kompleks, di mana keputusan pemain mempengaruhi hasil pertarungan.
 6. Desain Nama Robot dan Atribut Khusus
    a. Program Awal: Robot hanya memiliki nama generik seperti RoboOne, RoboTwo, dan RoboThree.
    b. Program Baru: Nama robot diubah menjadi lebih kreatif dan bermakna, seperti AegisX, Vitalis, dan CritStorm, dengan kemampuan yang disesuaikan dengan nama-nama tersebut.
